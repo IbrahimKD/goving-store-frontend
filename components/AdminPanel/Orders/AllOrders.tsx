@@ -41,7 +41,7 @@ const AllOrders: React.FC = () => {
   const menuRef = useRef<HTMLDivElement>(null);
 
   // Fixed page size to 2
-  const pageSize = 2;
+  const pageSize = 12;
 
   const columns: Column[] = [
     { Header: "Order Number", accessor: "orderNumber" },
@@ -229,8 +229,8 @@ const AllOrders: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-900 w-full pb-36 text-gray-300 p-8 max-md:p-2 max-md:py-12">
-      <h2 className="text-2xl font-bold mb-4">Order Details</h2>
+    <div className="w-full p-8 text-gray-300 bg-gray-900 pb-36 max-md:p-2 max-md:py-12">
+      <h2 className="mb-4 text-2xl font-bold">Order Details</h2>
 
       <div className="flex items-center mb-4 space-x-4">
         <input
@@ -238,39 +238,40 @@ const AllOrders: React.FC = () => {
           placeholder="Search by order number..."
           value={searchTerm}
           onChange={handleSearch}
-          className="bg-gray-800 border-gray-700 text-gray-300 px-4 py-2 rounded-md w-full"
+          className="w-full px-4 py-2 text-gray-300 bg-gray-800 border-gray-700 rounded-md"
         />
         <select
           value={deliveryStatus}
           onChange={handleDeliveryStatusChange}
-          className="bg-gray-800 border-gray-700 text-gray-300 px-4 py-2 rounded-md"
+          className="px-4 py-2 text-gray-300 bg-gray-800 border-gray-700 rounded-md"
         >
           <option value="all">All</option>
           <option value="Pending">Pending</option>
-          <option value="Complete">Complete</option>
-          <option value="Canceled">Canceled</option>
+          <option value="Processing">Processing</option>
+          <option value="Completed">Completed</option>
+          <option value="Cancelled">Cancelled</option>
         </select>
 
         <div className="relative" ref={menuRef}>
           <button
             onClick={() => setIsExportMenuOpen(!isExportMenuOpen)}
-            className="flex items-center bg-gray-800 border-gray-700 text-gray-300 px-4 py-2 rounded-md"
+            className="flex items-center px-4 py-2 text-gray-300 bg-gray-800 border-gray-700 rounded-md"
           >
             <span>Export</span>
             <BiExport className="ml-2" />
           </button>
 
           {isExportMenuOpen && (
-            <div className="absolute mt-2 right-0 bg-gray-800 border border-gray-700 rounded-md shadow-lg w-48">
+            <div className="absolute right-0 w-48 mt-2 bg-gray-800 border border-gray-700 rounded-md shadow-lg">
               <button
                 onClick={handleExportToXLSX}
-                className="block px-4 py-2 text-left text-gray-300 hover:bg-gray-700 w-full"
+                className="block w-full px-4 py-2 text-left text-gray-300 hover:bg-gray-700"
               >
                 Export to XLSX
               </button>
               <button
                 onClick={handleExportToPDF}
-                className="block px-4 py-2 text-left text-gray-300 hover:bg-gray-700 w-full"
+                className="block w-full px-4 py-2 text-left text-gray-300 hover:bg-gray-700"
               >
                 Export to PDF
               </button>
@@ -280,18 +281,18 @@ const AllOrders: React.FC = () => {
       </div>
 
       {isLoading ? (
-        <div className="flex justify-center items-center h-64">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+        <div className="flex items-center justify-center h-64">
+          <div className="w-12 h-12 border-t-2 border-b-2 border-blue-500 rounded-full animate-spin"></div>
         </div>
       ) : (
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-700">
             <thead>
-              <tr className="bg-gray-800 text-gray-500">
+              <tr className="text-gray-500 bg-gray-800">
                 {columns.map((column) => (
                   <th
                     key={column.accessor}
-                    className="px-4 py-3 text-left font-medium"
+                    className="px-4 py-3 font-medium text-left"
                   >
                     {column.Header}
                   </th>
@@ -325,10 +326,10 @@ const AllOrders: React.FC = () => {
                   <td className="px-4 py-3">
                     <div className="flex space-x-2">
                       <button onClick={() => handleEdit(order._id)}>
-                        <BiEdit className="text-blue-500 text-xl" />
+                        <BiEdit className="text-xl text-blue-500" />
                       </button>
                       <button onClick={() => handleDelete(order._id)}>
-                        <BiTrash className="text-red-500 text-xl" />
+                        <BiTrash className="text-xl text-red-500" />
                       </button>
                     </div>
                   </td>
