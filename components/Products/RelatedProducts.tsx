@@ -156,7 +156,7 @@ const RelatedProducts = ({ productId }: Props) => {
  ${
    !product.props ||
    (product.props.typeOfProps === "" &&
-     `overflow-hiddentext-ellipsis whitespace-nowrap`)
+     `overflow-hidden text-ellipsis whitespace-nowrap`)
  } 
                                 hover:text-primary transition-all`}
                                 >

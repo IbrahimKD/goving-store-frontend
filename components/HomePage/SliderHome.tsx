@@ -56,13 +56,13 @@ export default function SliderHome() {
   ];
 
   return (
-    <Carousel className="w-full max-w-full relative max-h-[400px] h-[350px]">
+    <Carousel className="relative max-h-[460px]  w-full max-w-full ">
       <CarouselContent>
         {CAROUSEL.map((item) => (
           <CarouselItem key={item.id}>
             <div className="p-1">
-              <Card className="w-full h-[350px] border-0 rounded-xl">
-                <CardContent className="flex items-start w-full h-full justify-start p-0 relative">
+              <Card className="w-full border-0 rounded-xl">
+                <CardContent className="relative flex items-start justify-start w-full p-0">
                   <Link
                     href={item.buttonUrl}
                     className="absolute hover:opacity-90 transition-all text-sm bottom-8 left-[50%] translate-x-[-50%] rounded-xl px-4 py-[4px]"
@@ -81,7 +81,7 @@ export default function SliderHome() {
                   </span>
                   <img
                     src={item.image}
-                    className="h-full w-full rounded-xl object-cover"
+                    className="object-cover w-full    h-[360px] rounded-2xl"
                     alt="Img1"
                   />
                 </CardContent>
