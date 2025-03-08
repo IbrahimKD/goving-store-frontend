@@ -12,8 +12,7 @@ Welcome to **Goving Store**, an online store specializing in digital products su
 - **MongoDB / Prisma** - Database for managing products and users.
 
 ## 📷 Store Preview
-> You can add store interface images here after uploading them to GitHub or any image hosting platform.
-
+![Store Preview](https://blogger.googleusercontent.com/img/a/AVvXsEhwo_JwaipJ2t8S4uL3x6urwnOMDJbP_prkwVvKMnTsbciit9auJaVzeOAVjFHMLMxIYMB65diTpxD-WCn0RUOv89l7TFuRx6VE0UREfkbo17AhRywr0TN3KWYrsyfPl_zSnXTneMIDfnzUDXcpBXGLtEHrS4FAjDlafcnuejsW3mZQ4YuSdrzUuqHb-KA=w643-h925)
 ## 📂 How to Run the Project
 1. **Clone the Repository:**
    ```sh
@@ -61,8 +60,7 @@ If you liked this project and found it useful, don't forget to support it by giv
 - **MongoDB / Prisma** - كقاعدة بيانات لإدارة المنتجات والمستخدمين.
 
 ## 📷 صور من المتجر
-> يمكنك هنا إضافة صور لواجهة المتجر بعد رفعها على GitHub أو أي منصة استضافة صور.
-
+![Store Preview](https://blogger.googleusercontent.com/img/a/AVvXsEhwo_JwaipJ2t8S4uL3x6urwnOMDJbP_prkwVvKMnTsbciit9auJaVzeOAVjFHMLMxIYMB65diTpxD-WCn0RUOv89l7TFuRx6VE0UREfkbo17AhRywr0TN3KWYrsyfPl_zSnXTneMIDfnzUDXcpBXGLtEHrS4FAjDlafcnuejsW3mZQ4YuSdrzUuqHb-KA=w643-h925)
 ## 📂 كيفية تشغيل المشروع
 1. **استنساخ المستودع:**
    ```sh
